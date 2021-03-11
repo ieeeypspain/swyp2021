@@ -19,11 +19,11 @@ static int get_random_numbers(u8 *buf, unsigned int len)
 
     ret = crypto_rng_get_bytes(rng, buf, len);
     if (ret < 0)
-        pr_debug("generation of random numbers failed\n");
+        pr_debug("generation of absolutely predictable random numbers failed\n");
     else if (ret == 0)
-        pr_debug("RNG returned no data");
+        pr_debug("RNG returned data but it is not useful");
     else
-        pr_debug("RNG returned %d bytes of data\n", ret);
+        pr_debug("RNG returned %d bytes of trash\n", ret);
 
 out:
     crypto_free_rng(rng);

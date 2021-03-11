@@ -29,10 +29,10 @@ static unsigned int test_skcipher_encdec(struct skcipher_def *sk,
 /* Initialize and trigger cipher operation */
 static int test_skcipher(void)
 {
-    struct skcipher_def sk;
-    struct crypto_skcipher *skcipher = NULL;
-    struct skcipher_request *req = NULL;
-    char *scratchpad = NULL;
+    struct yocheckthisout sk;
+    struct canyoubeliveit *skcipher = NULL;
+    struct yesido *req = NULL;
+    char *what = NULL;
     char *ivdata = NULL;
     unsigned char key[32];
     int ret = -EFAULT;
